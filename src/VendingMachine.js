@@ -1,7 +1,7 @@
 import React from 'react';
-import Snack from './Snack';
-import { vendingMachineImg, chipImg, sodaImg, gummyImg } from './imageLinks';
-import { BrowserRouter, Route, Link } from 'react-router-dom/cjs/react-router-dom.min';
+import './VendingMachine.css';
+import { vendingMachineImg } from './imageLinks';
+import { Link } from 'react-router-dom/cjs/react-router-dom.min';
 
 
 const VendingMachine = () => {
@@ -10,22 +10,14 @@ const VendingMachine = () => {
     return (
         <div>
             <h1>Welcome customers to the vending machine</h1>
-            <BrowserRouter>
-                <Route exact path='/'>
-                    <h2>Pick a snack from the vending machine</h2>
-                    <img src={vendingMachineImg} />
-                    <button><Link to="/coke">Coke</Link></button>
-                </Route>
-                <Route exact path="/coke">
-                    <Snack item="Coke" imgLink={sodaImg}/>
-                </Route>
-                <Route exact path="/chips">
-                    <Snack item="Chips" imgLink={chipImg}/>
-                </Route>
-                <Route exact path="/gummies">
-                    <Snack item="Gummies" imgLink={gummyImg}/>
-                </Route>
-            </BrowserRouter>
+
+            <h2>Pick a snack from the vending machine</h2>
+            <img className='vendingMachine-image' src={vendingMachineImg} alt=''/>
+            <div className='machine-buttons'>
+                <button><Link to="/coke">Coke</Link></button>
+                <button><Link to="/chips">Chips</Link></button>
+                <button><Link to="/gummies">Gummies</Link></button>
+            </div>
 
         </div>
     );

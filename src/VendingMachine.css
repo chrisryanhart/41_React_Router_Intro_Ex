@@ -1,0 +1,13 @@
+.vendingMachine-image {
+    width: 400px;
+    padding: 10px;
+}
+
+.machine-buttons {
+    padding: 10px;
+}
+
+.order-summary {
+    border: 2px solid black;
+    width: 300px;
+}
